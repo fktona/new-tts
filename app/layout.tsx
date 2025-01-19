@@ -31,7 +31,7 @@ export default function RootLayout({
             <Wrapper>
               <div className="min-h-dvh pt-2 max-w-screen-2xl mx-auto flex flex-col lg:gap-8 justify-between w-full">
                 <Navbar />
-                <main className="grow z-20 scale-90">{children}</main>
+                <main className="grow z-20 pb-5 scale-90">{children}</main>
                 <AnimatePresence>
                   <Footer />
                 </AnimatePresence>

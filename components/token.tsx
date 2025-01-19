@@ -1,8 +1,8 @@
 export default function TokenomicsContent() {
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 h-full lg:px-8 py-12 overflow-y-auto no-scrollbar">
-      <div className="relative flex flex-col items-center justify-center p-4 max-h-[1000px]">
-        <div className="w-full h-full relative max-h-[1000px] flex items-center blurs rounded-lg">
+      <div className="relative flex flex-col items-center justify-center p-4 lg:max-h-[1000px]">
+        <div className="w-full hidden h-full relative lg:max-h-[1000px] lg:flex items-center blurs rounded-lg">
           <iframe
             src="https://my.spline.design/particlescopy-6ff2282b232aefa774235464dd70e2be/"
             frameBorder="0"
@@ -14,7 +14,7 @@ export default function TokenomicsContent() {
         </div>
       </div>
 
-      <div className="relative p-4 max-h-[1000px] flex flex-col items-center justify-center ">
+      <div className="relative p-4 lg:max-h-[1000px] flex flex-col items-center justify-center ">
         <div
           className="w-6
        absolute top-0 left-0 aspect-square border-t-2 border-l-2 border-white"
@@ -31,7 +31,7 @@ export default function TokenomicsContent() {
           className="w-6
        aspect-square border-b-2 border-r-2 absolute bottom-0 right-0 border-white"
         />
-        <div className="w-full h-full flex flex-col max-h-[1000px] items-start justify-center">
+        <div className="w-full h-full flex flex-col lg:max-h-[1000px] items-start justify-center">
           <div className="blurs  p-4 font-byte w-full h-full flex flex-col items-center justify-center ">
             <div className="space-y-3">
               <h2 className="text-blue-400 font-byte mb-1 font-bold text-[36px]">

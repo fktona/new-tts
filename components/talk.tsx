@@ -148,7 +148,7 @@ export default function Talk() {
   }, [history, audioUrl]);
 
   return (
-    <div className="flex h-full absolute flex-col items-center justify-around gap-12 w-full">
+    <div className="flex h-full absolute flex-col pb-12 items-center justify-around gap-12 w-full">
       <h1 className="text-4xl font-medium font-inter fonter-b0ld">
         Truth's Response
       </h1>
@@ -170,7 +170,7 @@ export default function Talk() {
               transition: "all 0.3s ease-out",
             }}
           >
-            <p className="text-white">{response}</p>
+            <p className="text-white text-center">{response}</p>
           </div>
         ))}
         {/* End reference element */}

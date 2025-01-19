@@ -3,7 +3,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="w-full h-full overflow-y-auto no-scrollbar">
+    <div className="w-full h-full overflow-y-auto no-scrollbar pb-12">
       <div className="relative md:max-w-3xl p-4 mx-auto">
         <div className="w-6 absolute top-0 left-0 aspect-square border-t-2 border-l-2 border-white" />
         <div className="w-6 aspect-square border-t-2 border-r-2 absolute top-0 right-0 border-white" />
@@ -28,7 +28,9 @@ function About() {
                   target="_blank"
                   href="https://github.com/TruthIntel/TruthAutonomy"
                 >
-                  (https://github.com/TruthIntel/TruthAutonomy)
+                  (https://github.com/TruthIntel
+                  <br className="md:hidden" />
+                  /TruthAutonomy)
                 </a>
                 , our model can:
               </p>

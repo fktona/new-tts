@@ -161,13 +161,12 @@ export default function Nav() {
                   TOKENOMICS
                 </CustomButton>
                 <CustomButton>
-                  {" "}
                   <a
                     href="https://truthsocial.com/@TruthIntel"
-                    className="text-white transition-colors"
+                    className="text-white transition-colors uppercase"
                   >
                     <Image src="/x.svg" alt="logo" width={20} height={20} />
-                    TruthSocial
+                    Truth Social
                   </a>
                 </CustomButton>
               </div>

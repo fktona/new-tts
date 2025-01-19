@@ -2,15 +2,15 @@ export default function TokenomicsContent() {
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1  gap-8 h-full    lg:px-8 py-12 overflow-y-auto no-scrollbar">
       <div className="relative  flex flex-col justify-center">
-        <div className="w-full h-full relative max-h-[1000px] blurs rounded-lg">
+        <div className="w-full h-full relative max-h-[1000px] flex items-center blurs rounded-lg">
           <iframe
             src="https://my.spline.design/particlescopy-6ff2282b232aefa774235464dd70e2be/"
             frameBorder="0"
             width="100%"
             height="100%"
-            className="absolute -top-[300px] left-0 w-full  h-full"
+            className="absolute  left-0 w-full  h-full"
           ></iframe>
-          <div className="absolute bottom-[300px] w-full h-16 bg-[#121212]"></div>
+          <div className="absolute bottom-0 w-full h-16 bg-[#121212]"></div>
         </div>
       </div>
 

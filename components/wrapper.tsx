@@ -14,7 +14,7 @@ function Wrapper({ children }: { children: React.ReactNode }) {
         height="100%"
         className={cn(
           "fixed top-0 inset-0 blur-md left-0 w-full h-full",
-          !show && "blur-0"
+          !show && "blur-none"
         )}
       ></iframe>
 

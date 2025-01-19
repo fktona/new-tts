@@ -1,36 +1,18 @@
 import Footer from "@/components/footer";
 import React from "react";
 
-import Markdown from "react-markdown";
 function About() {
   return (
     <div className="w-full h-full overflow-y-auto no-scrollbar">
-      <div
-        className="relative  md:max-w-3xl p-4 mx-auto
-        
-        
-      "
-      >
-        <div
-          className="w-6
-       absolute top-0 left-0 aspect-square  border-t-2 border-l-2 border-white"
-        />
-        <div
-          className="w-6
-       aspect-square border-t-2  border-r-2 absolute top-0 right-0 border-white"
-        />
-        <div
-          className="w-6
-       aspect-square border-b-2 border-l-2 absolute bottom-0 left-0 border-white"
-        />
-        <div
-          className="w-6
-       aspect-square border-b-2 border-r-2 absolute bottom-0 right-0 border-white"
-        />{" "}
+      <div className="relative md:max-w-3xl p-4 mx-auto">
+        <div className="w-6 absolute top-0 left-0 aspect-square border-t-2 border-l-2 border-white" />
+        <div className="w-6 aspect-square border-t-2 border-r-2 absolute top-0 right-0 border-white" />
+        <div className="w-6 aspect-square border-b-2 border-l-2 absolute bottom-0 left-0 border-white" />
+        <div className="w-6 aspect-square border-b-2 border-r-2 absolute bottom-0 right-0 border-white" />
         <div className="border border-white/20 p-8 backdrop-blur-sm">
-          <div className="space-y-6 font-byte lg:text-[28px] text-[21px] ">
-            <h1 className="">Unfiltered. Unchallenged. Uncensored.</h1>
-            <h2 className="">Truth.</h2>
+          <div className="space-y-6 font-byte lg:text-[28px] text-[21px]">
+            <h1>Unfiltered. Unchallenged. Uncensored.</h1>
+            <h2>Truth.</h2>
 
             <p className="leading-relaxed">
               Experience the first ever AI intelligence to land on Truth Social.
@@ -41,17 +23,17 @@ function About() {
 
             <div className="space-y-2">
               <p>
-                Through applied use of the truthbrush GitHub
+                Through applied use of our open-source framework:
                 <a
                   target="_blank"
-                  href="https://github.com/stanfordio/truthbrush"
+                  href="https://github.com/TruthIntel/TruthAutonomy"
                 >
-                  {" "}
-                  (https://github.com/stanfordio/truthbrush)
-                </a>{" "}
-                our model can:
+                  (https://github.com/TruthIntel/TruthAutonomy)
+                </a>
+                , our model can:
               </p>
               <ul className="list-disc pl-6 space-y-1">
+                <li>Autonomously post onto Truth Social</li>
                 <li>Search for users, statuses, groups, or hashtags</li>
                 <li>Pull a user's statuses</li>
                 <li>Pull the list of "People to Follow" or suggested users</li>
@@ -71,12 +53,23 @@ function About() {
             <p className="leading-relaxed">
               With this information, our model can then formulate its own
               thoughts and interactions based off its own baseline personality
-              formulated around a conservative mindset. Speak directly to our
-              model in a vocal environment using our platform. Enter a new
-              sphere of AI under a different environment and pretense.
+              and then push such thoughts out onto the platform.
             </p>
 
-            <p className="text-xl">Discover Truth Intelligence.</p>
+            <p className="leading-relaxed">
+              Speak directly to our model in a vocal environment using our
+              platform. Enter a new sphere of AI under a different environment
+              and pretense.
+            </p>
+
+            <p className="text-xl text-blue-400 text-[26px] fontbold">
+              <a
+                href="https://github.com/TruthIntel/TruthAutonomy"
+                target="_blank"
+              >
+                Discover Truth Intelligence.
+              </a>
+            </p>
           </div>
         </div>
       </div>

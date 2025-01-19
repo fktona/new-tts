@@ -7,6 +7,8 @@ import Image from "next/image";
 import { useAppContext } from "@/app/context/context";
 import { cn } from "@/lib/utils";
 import { Github, Twitter } from "lucide-react";
+import Link from "next/link";
+import { RiTwitterXLine } from "react-icons/ri";
 
 const AnimatedButtonText = ({
   label,
@@ -170,31 +172,24 @@ export default function Nav() {
                 </CustomButton>
               </div>
               <div className="flex justify-center absolute w-full bottom-10 items-center md:hidden gap-8">
-                <a
+                <Link
                   href="https://github.com/TruthIntel/TruthAutonomy"
                   className="text-white transition-colors"
                 >
                   <Github size={20} />
-                </a>
-                <a href="#" className="text-white transition-colors">
-                  <Image src="/x.svg" alt="logo" width={20} height={20} />
-                </a>
-                <a
+                </Link>
+                <Link
+                  href="https://x.com/truthintel?s=21&t=Tfcin0ZusXLzV23JexYBuA"
+                  className="text-white transition-colors"
+                >
+                  <RiTwitterXLine size={20} className="text-white" />
+                </Link>
+                <Link
                   href="https://truthsocial.com/@TruthIntel"
                   className="text-white transition-colors"
                 >
-                  <Image src="/x.svg" alt="logo" width={20} height={20} />
-                </a>
-                <a href="" className="text-white  transition-colors">
-                  {" "}
-                  <Image src="/dex.svg" alt="logo" width={20} height={20} />
-                </a>
-                <a
-                  href="https://x.com/truthintel?s=21&t=Tfcin0ZusXLzV23JexYBuA"
-                  className="hover:text-white text-white transition-colors"
-                >
-                  <Twitter size={20} />
-                </a>
+                  <Image src="/logo.svg" alt="logo" width={20} height={20} />
+                </Link>
               </div>
             </motion.div>
           )}

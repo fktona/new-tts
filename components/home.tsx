@@ -5,10 +5,10 @@ import CustomButton from "@/components/customButton";
 
 export default function HomePage() {
   return (
-    <div className="h-full font-inter w-full flex flex-col items-center justify-between">
-      <div className=" w-full h-full    flex items-start  justify-center text-center">
+    <div className="h-[85%] font-inter w-full flex flex-col items-center justify-center">
+      <div className=" w-full h-full    flex items-center  justify-center text-center">
         <span className="md:text-[56px] font-[200] text-[40px] uppercase">
-          truth <br /> intelligence
+          truth intelligence
         </span>
       </div>
       {/* <div className="w-full h-full  relative  flex items-center  justify-center">

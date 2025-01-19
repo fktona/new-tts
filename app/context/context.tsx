@@ -6,6 +6,8 @@ import {
   Dispatch,
   SetStateAction,
   useEffect,
+  useRef,
+  use,
 } from "react";
 
 interface AppState {
@@ -19,6 +21,8 @@ interface AppContextProps {
   state: AppState;
   toggleState: (key: keyof AppState) => void;
   show: boolean;
+  handleMouseEnter: () => void;
+  handleMouseLeave: () => void;
 }
 
 export const AppContext = createContext<AppContextProps>({
@@ -30,6 +34,8 @@ export const AppContext = createContext<AppContextProps>({
     token: false,
   },
   toggleState: () => {},
+  handleMouseEnter: () => {},
+  handleMouseLeave: () => {},
 });
 
 export default function AppProvider({
@@ -44,11 +50,28 @@ export default function AppProvider({
     token: false,
   });
 
+  const audio1ref = useRef<HTMLAudioElement>(null);
+  const audio2ref = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    // Set the maximum volume to 50% when the components mount
+    if (audio1ref.current) {
+      audio1ref.current.volume = 0.5;
+    }
+    if (audio2ref.current) {
+      audio2ref.current.volume = 0.5;
+    }
+  }, []);
+
   const [show, setShow] = useState(false);
   useEffect(() => {
     state.home ? setShow(false) : setShow(true);
   }, [state]);
   const toggleState = (key: keyof AppState) => {
+    if (audio2ref.current) {
+      audio2ref.current.play();
+    }
+
     console.log(state);
     setState({
       home: false,
@@ -59,8 +82,28 @@ export default function AppProvider({
     });
   };
 
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (isHovered) {
+      audio1ref.current?.play();
+    } else {
+      audio1ref.current?.pause();
+    }
+    if (audio1ref.current) {
+      audio1ref.current.currentTime = 0;
+    }
+  }, [isHovered]);
+
   return (
-    <AppContext.Provider value={{ state, toggleState, show }}>
+    <AppContext.Provider
+      value={{ state, toggleState, show, handleMouseEnter, handleMouseLeave }}
+    >
+      <audio ref={audio1ref} src="/audio1.mp3" />
+
+      <audio ref={audio2ref} src="/audio2.mp3" />
       {children}
     </AppContext.Provider>
   );

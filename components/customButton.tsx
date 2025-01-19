@@ -25,7 +25,7 @@ export default function CustomButton({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       className={cn(
-        "flex items-center group  hover:bg-white/10 rounded-none hover:text-white/70 relative justify-center text-white",
+        "flex items-center group text-[20px]  hover:bg-white/10 rounded-none hover:text-white/70 relative justify-center text-white",
         className
       )}
     >

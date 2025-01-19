@@ -14,8 +14,11 @@ function Footer() {
         >
           <Github size={20} />
         </Link>
+        <Link href="#" className="text-white transition-colors">
+          <Image src="/x.svg" alt="logo" width={20} height={20} />
+        </Link>
         <Link
-          href="https://github.com"
+          href="https://truthsocial.com/@TruthIntel"
           className="text-white transition-colors"
         >
           <Image src="/x.svg" alt="logo" width={20} height={20} />
@@ -28,7 +31,7 @@ function Footer() {
           href="https://x.com/truthintel?s=21&t=Tfcin0ZusXLzV23JexYBuA"
           className="hover:text-white text-white transition-colors"
         >
-          <Image src="/logo.svg" alt="logo" width={20} height={20} />
+          <Twitter size={20} />
         </Link>
       </div>
     </footer>

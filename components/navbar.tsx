@@ -7,7 +7,6 @@ import Image from "next/image";
 import { useAppContext } from "@/app/context/context";
 import { cn } from "@/lib/utils";
 import { Github, Twitter } from "lucide-react";
-import Link from "next/link";
 
 const AnimatedButtonText = ({
   label,
@@ -23,21 +22,44 @@ const AnimatedButtonText = ({
         animate={{ y: isHovered ? "-150%" : "0%" }}
         transition={{ duration: 0.07 }}
       >
-        {label}
+        {label.toLowerCase() == "truth social" ? (
+          <a
+            href="https://truthsocial.com/@TruthIntel"
+            className="text-white transition-colors"
+          >
+            {label}
+          </a>
+        ) : (
+          label
+        )}
       </motion.div>
       <motion.div
         className="absolute top-[150%] left-0 transition-transform duration-300 ease-in-out transform"
         animate={{ y: isHovered ? "-150%" : "0%" }}
         transition={{ duration: 0.07 }}
       >
-        {label}
+        {label.toLowerCase() == "truth social" ? (
+          <a
+            href="https://truthsocial.com/@TruthIntel"
+            className="text-white transition-colors"
+          >
+            {label}
+          </a>
+        ) : (
+          label
+        )}
       </motion.div>
     </div>
   );
 };
 
 export default function Nav() {
-  const { state, toggleState } = useAppContext();
+  const {
+    state,
+    toggleState,
+    handleMouseEnter: handle,
+    handleMouseLeave: handle2,
+  } = useAppContext();
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
 
   const handleMouseEnter = (button: string) => setHoveredButton(button);
@@ -59,14 +81,20 @@ export default function Nav() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-12">
-          {["about", "token", "talk"].map((item) => (
+          {["about", "token", "truth social"].map((item) => (
             <CustomButton
               key={item}
               onClick={() => toggleState(item as any)}
               //@ts-ignore
               active={state[item]}
-              onMouseEnter={() => handleMouseEnter(item)}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={() => {
+                handleMouseEnter(item);
+                handle();
+              }}
+              onMouseLeave={() => {
+                handle2();
+                handleMouseLeave();
+              }}
               className="group relative overflow-hidden"
             >
               <AnimatedButtonText
@@ -77,7 +105,15 @@ export default function Nav() {
           ))}
         </div>
         <div className="flex items-center relative z-50 justify-center gap-5">
-          {/* <CustomButton active>LAUNCH APP</CustomButton> */}
+          <CustomButton
+            onClick={() => {
+              toggleState("talk");
+              toggleMenu();
+            }}
+            active
+          >
+            TALK
+          </CustomButton>
 
           {/* Mobile Menu Trigger */}
           <button
@@ -122,36 +158,43 @@ export default function Nav() {
                 >
                   TOKENOMICS
                 </CustomButton>
-                <CustomButton
-                  onClick={() => {
-                    toggleState("talk");
-                    toggleMenu();
-                  }}
-                  active={state.talk}
-                >
-                  TALK
+                <CustomButton>
+                  {" "}
+                  <a
+                    href="https://truthsocial.com/@TruthIntel"
+                    className="text-white transition-colors"
+                  >
+                    <Image src="/x.svg" alt="logo" width={20} height={20} />
+                    TruthSocial
+                  </a>
                 </CustomButton>
               </div>
               <div className="flex justify-center absolute w-full bottom-10 items-center md:hidden gap-8">
-                <Link
+                <a
                   href="https://github.com/TruthIntel/TruthAutonomy"
                   className="text-white transition-colors"
                 >
                   <Github size={20} />
-                </Link>
-
-                <Link
-                  href="https://github.com"
+                </a>
+                <a href="#" className="text-white transition-colors">
+                  <Image src="/x.svg" alt="logo" width={20} height={20} />
+                </a>
+                <a
+                  href="https://truthsocial.com/@TruthIntel"
                   className="text-white transition-colors"
                 >
+                  <Image src="/x.svg" alt="logo" width={20} height={20} />
+                </a>
+                <a href="" className="text-white  transition-colors">
+                  {" "}
                   <Image src="/dex.svg" alt="logo" width={20} height={20} />
-                </Link>
-                <Link
+                </a>
+                <a
                   href="https://x.com/truthintel?s=21&t=Tfcin0ZusXLzV23JexYBuA"
                   className="hover:text-white text-white transition-colors"
                 >
-                  <Image src="/logo.svg" alt="logo" width={20} height={20} />
-                </Link>
+                  <Twitter size={20} />
+                </a>
               </div>
             </motion.div>
           )}

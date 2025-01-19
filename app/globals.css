@@ -76,8 +76,8 @@ body {
 }
 
 .mju {
-  background: url("/circle.png") lightgray 50% / cover no-repeat;
-  mix-blend-mode: plus-lighter;
+  /* background: url("/circle.png") lightgray 50% / cover no-repeat; */
+  mix-blend-mode: screen;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

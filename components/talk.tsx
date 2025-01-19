@@ -149,9 +149,11 @@ export default function Talk() {
 
   return (
     <div className="flex h-full absolute flex-col items-center justify-around gap-12 w-full">
-      <h1 className="text-4xl font-medium">Truth's Response</h1>
+      <h1 className="text-4xl font-medium font-inter fonter-b0ld">
+        Truth's Response
+      </h1>
       <div
-        className="w-full h-[40%] md:px-8 md:max-w-6xl mx-auto overflow-y-auto no-scrollbar"
+        className="w-full h-[40%] md:px-8 md:max-w-6xl mx-auto flex flex-col items-center justify-center overflow-y-auto no-scrollbar"
         style={{ perspective: "1000px" }}
       >
         {history.map((response, index) => (

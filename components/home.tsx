@@ -11,6 +11,16 @@ export default function HomePage() {
           truth <br /> intelligence
         </span>
       </div>
+      {/* <div className="w-full h-full  relative  flex items-center  justify-center">
+        <Image
+          width={300}
+          height={300}
+          alt="circle"
+          src={"/circle.png"}
+          className="mju"
+        />
+        <div className="w-[300px] h-[300px] mju" />
+      </div> */}
 
       {/* <div className="absolute bottom-0 flex justify-center  flex-col md:flex-row items-center gap-2 left-1/2 -translate-x-1/2 font-mono text-sm text-zinc-400">
         <CustomButton active={true} className="">

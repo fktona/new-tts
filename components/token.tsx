@@ -32,8 +32,8 @@ export default function TokenomicsContent() {
        aspect-square border-b-2 border-r-2 absolute bottom-0 right-0 border-white"
         />
         <div className="w-full h-full flex flex-col lg:max-h-[1000px] items-start justify-center">
-          <div className="blurs  p-4 font-byte w-full h-full flex flex-col items-center justify-center ">
-            <div className="space-y-3">
+          <div className="blurs  p-4 font-byte w-full h-full flex flex-col items-start px-6 justify-center ">
+            <div className="space-y-3 text-start">
               <h2 className="text-blue-400 font-byte mb-1 font-bold text-[36px]">
                 Circulation (92%)
               </h2>

@@ -18,6 +18,8 @@ function Wrapper({ children }: { children: React.ReactNode }) {
         )}
       ></iframe>
 
+      <div className="absolute right-3  bottom-5 z-1 w-[165px] h-[30px] bg-black"></div>
+
       <div className="fixed top-0 left-0 w-full h-full bg-black/60"></div>
       {children}
     </>

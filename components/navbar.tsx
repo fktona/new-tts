@@ -171,7 +171,7 @@ export default function Nav() {
                   </a>
                 </CustomButton>
               </div>
-              <div className="flex justify-center absolute w-full bottom-10 items-center md:hidden gap-8">
+              <div className="flex  justify-center absolute w-full bottom-10 items-center md:hidden gap-8">
                 <Link
                   href="https://github.com/TruthIntel/TruthAutonomy"
                   className="text-white transition-colors"

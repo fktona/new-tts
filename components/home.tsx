@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className="h-[85%] font-inter w-full flex flex-col items-center justify-center">
       <div className=" w-full h-full    flex items-center  justify-center text-center">
-        <span className="md:text-[56px] font-[200] text-[40px] uppercase">
+        <span className="md:text-[56px] md:tracking-[13px] tracking-[8px] font-[200] text-[40px] uppercase">
           truth intelligence
         </span>
       </div>
